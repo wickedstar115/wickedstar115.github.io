@@ -9,12 +9,5 @@
 // @grant        none
 // ==/UserScript==
 
-function getCurrentURL () {
-  return window.location.href
-}
-
-const url = getCurrentURL()
-if (url) {
-    nurl = url.replace('https://ruralvirtual.zoom.us/j/','https://ruralvirtual.zoom.us/wc/join/');
-    window.location = (nurl)
-}
+window.location = window.location.toString().replace('ruralvirtual.zoom.us/j/', 'ruralvirtual.zoom.us/wc/join/');
+console.log("redirect")
